@@ -1,4 +1,4 @@
-win = False
+gameover = False
 
 spot1 = '_'
 spot2 = '_'
@@ -9,6 +9,90 @@ spot6 = '_'
 spot7 = '_'
 spot8 = '_'
 spot9 = '_'
+
+def winornot():
+    if spot5 == 'x' and spot2 == 'x' and spot8 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot5 == 'x' and spot4 == 'x' and spot6 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot5 == 'x' and spot3 == 'x' and spot7 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot5 == 'x' and spot1 == 'x' and spot9 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot1 == 'x' and spot4 == 'x' and spot7 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot3 == 'x' and spot6 == 'x' and spot9 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot1 == 'x' and spot2 == 'x' and spot3 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot7 == 'x' and spot8 == 'x' and spot9 == 'x':
+        print('x win')
+        print(' ')
+        print(' ')
+        gameover = True
+
+    if spot5 == 'o' and spot2 == 'o' and spot8 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot5 == 'o' and spot4 == 'o' and spot6 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot5 == 'o' and spot3 == 'o' and spot7 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot5 == 'o' and spot1 == 'o' and spot9 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot1 == 'o' and spot4 == 'o' and spot7 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot3 == 'o' and spot6 == 'o' and spot9 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot1 == 'o' and spot2 == 'o' and spot3 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+    elif spot7 == 'o' and spot8 == 'o' and spot9 == 'o':
+        print('o win')
+        print(' ')
+        print(' ')
+        gameover = True
+
 
 
 def xchoose():
@@ -44,7 +128,9 @@ def xchoose():
     print("{}|{}|{}".format(spot4, spot5, spot6))
     print("{}|{}|{}".format(spot7, spot8, spot9))
 
-#-------------------------------------------------------------------------------------
+    winornot()
+#-------------------------------------------------------------------------------------#
+
 def ochoose():
     o = input('o what spot')
     global spot1
@@ -78,63 +164,17 @@ def ochoose():
     print("{}|{}|{}".format(spot4, spot5, spot6))
     print("{}|{}|{}".format(spot7, spot8, spot9))
 
+    winornot()
 
+##asdfghjkl
 
-#asdfghjkl
-
-if spot5=='x' and spot2=='x' and spot8=='x':
-    print('x win')
-    win = True
-elif spot5=='x' and spot4=='x' and spot6=='x':
-    print('x win')
-    win = True
-elif spot5=='x' and spot3=='x' and spot7=='x':
-    print('x win')
-    win = True
-elif spot5=='x' and spot1=='x' and spot9=='x':
-    print('x win')
-    win = True
-elif spot1=='x' and spot4=='x' and spot7=='x':
-    print('x win')
-    win = True
-elif spot3=='x' and spot6=='x' and spot9=='x':
-    print('x win')
-    win = True
-elif spot1=='x' and spot2=='x' and spot3=='x':
-    print('x win')
-    win = True
-elif spot7=='x' and spot8=='x' and spot9=='x':
-    print('x win')
-    win = True
-
-if spot5=='o' and spot2=='o' and spot8=='o':
-    print('o win')
-    win = True
-elif spot5=='o' and spot4=='o' and spot6=='o':
-    print('o win')
-    win = True
-elif spot5=='o' and spot3=='o' and spot7=='o':
-    print('o win')
-    win = True
-elif spot5=='o' and spot1=='o' and spot9=='o':
-    print('o win')
-    win = True
-elif spot1=='o' and spot4=='o' and spot7=='o':
-    print('o win')
-    win = True
-elif spot3=='o' and spot6=='o' and spot9=='o':
-    print('o win')
-    win = True
-elif spot1=='o' and spot2=='o' and spot3=='o':
-    print('o win')
-    win = True
-elif spot7=='o' and spot8=='o' and spot9=='o':
-    print('o win')
-    win = True
-
-#eeeeeee
-
-while win == False:
+while gameover == False:
     xchoose()
     ochoose()
+
+if gameover == True:
+    print('game over. reload to play again.')
+#eeeeeee
+
+
 
